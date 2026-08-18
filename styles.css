@@ -266,8 +266,8 @@ a { color: var(--red-deep); }
 /* ---------- Deadline bar + countdown ---------- */
 .deadline-bar { background: var(--red); color: #fff; }
 .deadline-bar .wrap {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-  gap: 1rem 1.5rem; padding-block: 1rem;
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 1rem 3rem; padding-block: 1rem;
 }
 .deadline-bar__label {
   font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em;
