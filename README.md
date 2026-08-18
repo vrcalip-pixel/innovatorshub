@@ -50,13 +50,27 @@ The Sheet should live in a project or department account, not a personal one. Wh
 
 ## Logos
 
-The lockup currently renders as type. To swap in the real marks:
+Both marks are in place: `assets/lbcc-logo.png` (LBCC vertical logo) and
+`assets/lbcc-workforce-education-logo.png` (LBCC Workforce Education badge).
 
-1. Get the approved files from LBCC Marketing (`.svg` preferred, transparent `.png` acceptable).
-2. Save as `assets/lbcc-logo.svg` and `assets/strong-workforce-logo.svg`.
-3. In each HTML file, find `<!-- Replace with:` and swap the `<p class="lockup__text">` for the `<img>` tag shown in the comment.
+They appear in two places on every page — the white bar under the nav, and a
+white panel in the footer. Both are supplied on white and are **never**
+recolored, cropped, stretched, or placed on a tinted background; the footer
+panel exists specifically so the artwork stays on white against the black
+footer.
 
-**Don't publish the logos until Marketing approves the page.** Logo use is the single most likely thing to draw a correction from PIO.
+Display heights are set in `styles.css` under "Institutional lockup":
+72px / 64px in the header, 58px / 52px in the footer, reduced on small screens.
+The circular WE badge is set slightly smaller than the LBCC mark because a
+circle reads larger than a stacked wordmark at equal height.
+
+Source files are 180px tall — roughly 2.5× display size, so they stay crisp on
+high-DPI screens. If you ever get vector `.svg` versions from Marketing, swap
+them in and drop the `width`/`height` attributes.
+
+**Logo use should still be confirmed with Marketing/PIO** as part of the page
+review. Having the correct files is not the same as having approval to publish
+them.
 
 ## Publishing pages in stages
 

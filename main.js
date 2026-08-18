@@ -75,9 +75,12 @@ var DEADLINE = new Date('2026-10-16T10:00:00-07:00');
 
     if (ms <= 0) {
       box.classList.add('is-hidden');
-      if (closed) closed.classList.remove('is-hidden');
+      if (closed) { closed.classList.remove('is-hidden'); closed.hidden = false; }
       return;
     }
+
+    // Deadline has not passed: keep the "closed" message out of the page entirely.
+    if (closed) { closed.classList.add('is-hidden'); closed.hidden = true; }
 
     var days = Math.floor(ms / 86400000);
     var hrs  = Math.floor(ms % 86400000 / 3600000);
