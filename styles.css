@@ -173,41 +173,33 @@ a { color: var(--red-deep); }
 .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
 
 /* ---------- Institutional lockup ----------
-   Both marks are supplied on white and are never recolored, cropped,
-   or placed on a tinted background. On the black footer they sit inside
-   a white panel so the artwork stays exactly as approved. */
+   Sits in a light band between the red rule and the black footer.
+   Both marks are red AND black artwork on white: on a dark background
+   the black elements disappear, so they stay on a light band and are
+   never recolored, cropped, or knocked out. */
+.lockup-band {
+  background: var(--paper);
+  border-top: 4px solid var(--red);
+}
 .lockup {
   display: flex; flex-wrap: wrap; align-items: center;
-  gap: 1rem 2rem; padding-block: 1rem;
+  gap: 1rem 2.25rem; padding-block: 1.5rem;
 }
-.lockup--bar { background: var(--paper-2); border-bottom: 1px solid var(--rule); }
-
 .lockup__logo { width: auto; display: block; }
-.lockup__logo--lbcc { height: 72px; }
-.lockup__logo--we   { height: 64px; }  /* circular badge reads larger at equal height */
+.lockup__logo--lbcc { height: 64px; }
+.lockup__logo--we   { height: 58px; }
 
 .lockup__note {
-  margin: 0; max-width: 34ch;
-  font-size: 0.78rem; line-height: 1.4; color: var(--ink-600);
+  margin: 0; max-width: 38ch;
+  font-size: 0.8rem; line-height: 1.45; color: var(--ink-600);
   border-left: 1px solid var(--rule); padding-left: 1.75rem;
 }
 
-/* Footer: white panel keeps the marks on their required background */
-.footer-lockup { padding-block: 1.75rem; border-bottom: 1px solid var(--rule-light); }
-.lockup-panel {
-  display: inline-flex; align-items: center; gap: 2rem;
-  background: #fff; border-radius: var(--radius);
-  padding: 0.9rem 1.5rem;
-}
-.footer-lockup .lockup__logo--lbcc { height: 58px; }
-.footer-lockup .lockup__logo--we   { height: 52px; }
-
 @media (max-width: 700px) {
-  .lockup { gap: 1.25rem 1.5rem; }
-  .lockup__logo--lbcc { height: 56px; }
-  .lockup__logo--we   { height: 50px; }
-  .lockup__note { display: none; }
-  .lockup-panel { gap: 1.25rem; padding: 0.8rem 1.1rem; }
+  .lockup { gap: 1.25rem 1.75rem; padding-block: 1.25rem; }
+  .lockup__logo--lbcc { height: 52px; }
+  .lockup__logo--we   { height: 47px; }
+  .lockup__note { border-left: 0; padding-left: 0; max-width: none; }
 }
 
 /* ---------- Hero ---------- */
@@ -285,18 +277,19 @@ a { color: var(--red-deep); }
 .deadline-bar .btn--ghost { border-color: #fff; color: #fff; }
 .deadline-bar .btn--ghost:hover { background: rgba(255,255,255,0.18); }
 
-.countdown { display: flex; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
-.countdown li {
-  background: rgba(0,0,0,0.25); border-radius: var(--radius);
-  padding: 0.45rem 0.7rem; text-align: center; min-width: 62px;
-}
+.countdown { display: flex; gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
+.countdown li { text-align: center; min-width: 44px; }
 .countdown b {
-  display: block; font-family: var(--display); font-size: 1.35rem;
-  font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums;
+  display: block; font-family: var(--display); font-size: 1.75rem;
+  font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums;
 }
 .countdown span {
   font-family: var(--mono); font-size: 0.6rem;
-  letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.88;
+  letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.9;
+}
+@media (max-width: 560px) {
+  .countdown { gap: 1.1rem; }
+  .countdown b { font-size: 1.4rem; }
 }
 
 /* ---------- Key dates ---------- */
@@ -421,7 +414,7 @@ tbody tr:last-child td { border-bottom: 0; }
 .person__role { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600); }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--ink); color: #B5AFAC; padding-block: 0 2rem; font-size: 0.92rem; border-top: 4px solid var(--red); }
+.site-footer { background: var(--ink); color: #B5AFAC; padding-block: 0 2rem; font-size: 0.92rem; }
 .footer-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); padding-block: 2.5rem 2rem; border-bottom: 1px solid var(--rule-light); }
 .site-footer h2 { font-family: var(--mono); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-bright); margin-bottom: 0.9rem; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
