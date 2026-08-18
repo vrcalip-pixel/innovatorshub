@@ -67,20 +67,30 @@ var DEADLINE = new Date('2026-10-16T10:00:00-07:00');
   if (!box) return;
 
   var closed = document.getElementById('deadline-closed');
+  var open_  = document.getElementById('deadline-open');
 
   function pad(n) { return n < 10 ? '0' + n : String(n); }
+
+  function show(el, visible) {
+    if (!el) return;
+    el.hidden = !visible;
+    el.classList[visible ? 'remove' : 'add']('is-hidden');
+  }
 
   function render() {
     var ms = DEADLINE - new Date();
 
+    // Past the deadline: the whole bar becomes the closed notice.
     if (ms <= 0) {
-      box.classList.add('is-hidden');
-      if (closed) { closed.classList.remove('is-hidden'); closed.hidden = false; }
+      show(box, false);
+      show(open_, false);
+      show(closed, true);
       return;
     }
 
-    // Deadline has not passed: keep the "closed" message out of the page entirely.
-    if (closed) { closed.classList.add('is-hidden'); closed.hidden = true; }
+    // Before the deadline: countdown only, no trace of the closed notice.
+    show(closed, false);
+    show(open_, true);
 
     var days = Math.floor(ms / 86400000);
     var hrs  = Math.floor(ms % 86400000 / 3600000);
