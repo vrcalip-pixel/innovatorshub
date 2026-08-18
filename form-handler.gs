@@ -51,7 +51,7 @@ function doPost(e) {
     var sheet = book.getSheetByName(formName) || book.insertSheet(formName);
 
     // Build the header row from the field names on first write.
-    var keys = Object.keys(params).filter(function (k) { return k !== '_form'; });
+    var keys = Object.keys(params).filter(function (k) { return k !== '_form' && k !== '_website'; });
     keys.sort();
 
     if (sheet.getLastRow() === 0) {
