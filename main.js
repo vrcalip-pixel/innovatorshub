@@ -8,7 +8,7 @@
    Until this is filled in, the form shows a friendly fallback
    message with the project email instead of silently failing.
 ------------------------------------------------------------------- */
-var FORM_ENDPOINT = ''; // e.g. 'https://script.google.com/macros/s/AKfy.../exec'
+var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwU_x61uNVWi6r9jtSRqVmAsgaq4deZWXPo9rEZ-w1YZ1mJd39PRBBWgj8vAK299MI/exec';
 
 /* Interest-list deadline: October 16, 2026, 10:00 AM Pacific (PDT = UTC-7) */
 var DEADLINE = new Date('2026-10-16T10:00:00-07:00');
@@ -115,7 +115,16 @@ var DEADLINE = new Date('2026-10-16T10:00:00-07:00');
   var forms = document.querySelectorAll('form[data-sheet-form]');
   if (!forms.length) return;
 
+  /* What each form says back on a successful submission.
+     Edit this copy freely — it is the only place these strings live. */
+  var SUCCESS = {
+    interest: 'You\u2019re on the list. Watch your email \u2014 we\u2019ll send registration steps and information session dates.',
+    referral: 'Referral received. We\u2019ll contact the student directly and copy you on the message.',
+    partner:  'Thank you \u2014 we\u2019ll follow up with details about the capstone event and guest sessions.'
+  };
+
   Array.prototype.forEach.call(forms, function (form) {
+    var formName = form.getAttribute('data-sheet-form');
     var status = form.querySelector('.form-status');
     var button = form.querySelector('button[type="submit"]');
     var buttonText = button ? button.textContent : '';
@@ -145,7 +154,7 @@ var DEADLINE = new Date('2026-10-16T10:00:00-07:00');
       say('Sending\u2026', 'ok');
 
       var data = new URLSearchParams(new FormData(form));
-      data.append('_form', form.getAttribute('data-sheet-form'));
+      data.append('_form', formName);
       data.append('_submitted', new Date().toISOString());
 
       // No custom headers — keeps it a simple request, so no CORS preflight.
@@ -154,7 +163,7 @@ var DEADLINE = new Date('2026-10-16T10:00:00-07:00');
         .then(function (res) {
           if (res && res.ok) {
             form.reset();
-            say('You\u2019re on the list. Watch your email \u2014 we\u2019ll send registration steps and information session dates.', 'ok');
+            say(SUCCESS[formName] || SUCCESS.interest, 'ok');
           } else {
             throw new Error('rejected');
           }
