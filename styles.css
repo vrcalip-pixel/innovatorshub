@@ -267,7 +267,7 @@ a { color: var(--red-deep); }
 .deadline-bar { background: var(--red); color: #fff; }
 .deadline-bar .wrap {
   display: flex; flex-wrap: wrap; align-items: center;
-  gap: 1rem 3rem; padding-block: 1rem;
+  justify-content: space-between; gap: 1rem 2.5rem; padding-block: 1rem;
 }
 .deadline-bar__label {
   font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em;
@@ -277,7 +277,13 @@ a { color: var(--red-deep); }
 .deadline-bar .btn--ghost { border-color: #fff; color: #fff; }
 .deadline-bar .btn--ghost:hover { background: rgba(255,255,255,0.18); }
 
-.countdown { display: flex; gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
+.countdown {
+  display: flex; margin: 0; padding: 0; list-style: none;
+  flex: 1 1 320px;                 /* take the leftover width */
+  justify-content: space-evenly;   /* and share it between the four units */
+  max-width: 640px;                /* but don't sprawl on very wide screens */
+  gap: 1rem;
+}
 .countdown li { text-align: center; min-width: 44px; }
 .countdown b {
   display: block; font-family: var(--display); font-size: 1.75rem;
@@ -288,7 +294,7 @@ a { color: var(--red-deep); }
   letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.9;
 }
 @media (max-width: 560px) {
-  .countdown { gap: 1.1rem; }
+  .countdown { flex-basis: 100%; justify-content: space-between; gap: 0.5rem; }
   .countdown b { font-size: 1.4rem; }
 }
 
