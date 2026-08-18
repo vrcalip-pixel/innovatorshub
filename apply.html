@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join the interest list — AI Innovators at LBCC</title>
+<meta name="description" content="Join the interest list for the AI Innovators learning community at Long Beach City College. Deadline: October 16, 2026 at 10:00 AM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- REMOVE BEFORE LAUNCH: delete this one line -->
+<div class="draft-flag">DRAFT — internal review copy. Not yet approved by LBCC Marketing. Do not circulate publicly.</div>
+
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="index.html">AI&nbsp;Innovators <span class="brand-mark">LBCC</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
+    <ul class="nav-list" id="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="program.html">The program</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="capstone.html">Capstone</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="apply.html">Join the interest list</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="lockup--bar">
+  <div class="wrap lockup">
+    <!-- Replace with: <img src="assets/lbcc-logo.svg" alt="Long Beach City College"> -->
+    <p class="lockup__text">Long Beach City College<span>Business &amp; Computer Information Systems</span></p>
+    <!-- Replace with: <img src="assets/strong-workforce-logo.svg" alt="California Community Colleges Strong Workforce Program"> -->
+    <p class="lockup__text">Strong Workforce Program<span>California Community Colleges</span></p>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="section section--dark">
+    <div class="wrap">
+      <p class="eyebrow">Get started</p>
+      <h1>Joining the interest list takes about two minutes.</h1>
+      <p class="lede">It's not an application and it doesn't commit you to anything. It puts you on the list for registration steps, information session dates, and a reminder before the deadline.</p>
+    </div>
+  </section>
+
+  <section class="deadline-bar">
+    <div class="wrap">
+      <div>
+        <p class="deadline-bar__label">Interest list closes</p>
+        <p class="deadline-bar__date">Friday, October 16, 2026 &middot; 10:00 AM</p>
+      </div>
+      <ul class="countdown" id="countdown" aria-label="Time remaining to join the interest list">
+        <li><b>&mdash;</b><span>days</span></li>
+      </ul>
+      <p id="deadline-closed" class="is-hidden" style="margin:0;font-weight:700">The interest list is now closed. Email us — we may still have room.</p>
+      <a class="btn btn--ghost" href="apply.html">Join the list</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Students</p>
+      <h2>Join the 2026–27 cohort interest list.</h2>
+      <div style="margin-top:2rem">
+      <form class="form-card" data-sheet-form="interest" id="apply" novalidate>
+        <div class="field">
+          <label for="apply-name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="apply-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="apply-email">Email <span class="req" aria-hidden="true">*</span></label>
+            <span class="hint">Use your LBCC email if you have one.</span>
+            <input type="email" id="apply-email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="apply-phone">Phone</label>
+            <span class="hint">Optional. Text reminders only.</span>
+            <input type="tel" id="apply-phone" name="phone" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="apply-status">Are you currently enrolled at LBCC?</label>
+          <select id="apply-status" name="lbcc_status">
+            <option value="">Select one</option>
+            <option>Yes, currently enrolled</option>
+            <option>Applied, not yet enrolled</option>
+            <option>Not yet — interested in applying</option>
+            <option>Former LBCC student returning</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="apply-study">What are you studying, or thinking about studying?</label>
+          <input type="text" id="apply-study" name="program_of_study" placeholder="Business, CIS, undecided, something else…">
+        </div>
+        <div class="field">
+          <label for="apply-heard">How did you hear about AI Innovators?</label>
+          <select id="apply-heard" name="heard_from">
+            <option value="">Select one</option>
+            <option>Counselor or advisor</option>
+            <option>Instructor or class visit</option>
+            <option>Flyer or QR code on campus</option>
+            <option>Friend or classmate</option>
+            <option>Email from LBCC</option>
+            <option>Social media</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Anything we should know?</label>
+          <div class="choice">
+            <input type="checkbox" id="apply-counselor" name="wants_counselor" value="Yes">
+            <label for="apply-counselor" style="font-weight:400">I'd like a counselor to contact me about fitting this into my plan.</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" id="apply-working" name="working_student" value="Yes">
+            <label for="apply-working" style="font-weight:400">I work and may need advance notice for scheduling around the kickoff.</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="apply-notes">Questions or accommodation needs</label>
+          <span class="hint">Optional. Tell us what you need and we'll arrange it.</span>
+          <textarea id="apply-notes" name="notes"></textarea>
+        </div>
+        <div class="honey" aria-hidden="true">
+          <label for="apply-website">Leave this field empty</label>
+          <input type="text" id="apply-website" name="_website" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn btn--primary" type="submit">Join the interest list</button>
+        <p class="form-status" aria-live="polite"></p>
+        <p class="small muted" style="margin-top:1rem">We use this to contact you about this program only. We never ask for your Social Security number or financial information, and we don't share your information outside LBCC.</p>
+      </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <p class="eyebrow">Key dates</p>
+      <h2>Four dates to put in your phone.</h2>
+      <div class="dates" style="margin-top:1.5rem">
+        <div class="date-step">
+          <p class="date-step__when">Oct 12</p>
+          <p class="date-step__what">Final reminder goes out</p>
+          <p>We email everyone on the list that the deadline is that Friday.</p>
+        </div>
+        <div class="date-step">
+          <p class="date-step__when">Oct 16</p>
+          <p class="date-step__what">Interest list closes, 10:00 AM</p>
+          <p>Last moment to submit the form and be considered for the cohort.</p>
+        </div>
+        <div class="date-step">
+          <p class="date-step__when">Oct 19</p>
+          <p class="date-step__what">You hear back</p>
+          <p>Everyone who applied is notified either way, by email.</p>
+        </div>
+        <div class="date-step">
+          <p class="date-step__when">Oct 23</p>
+          <p class="date-step__what">Kickoff event</p>
+          <p>In person, and required for everyone in the cohort. Classes start the following week.</p>
+        </div>
+      </div>
+      <p class="small muted" style="margin-top:1rem">Kickoff date is tentative pending venue confirmation. If you work and need advance notice for your employer, say so on the form and we'll get you details as early as we can.</p>
+    </div>
+  </section>
+
+  <section class="section" id="refer">
+    <div class="wrap">
+      <p class="eyebrow">Counselors, advisors &amp; faculty</p>
+      <h2>Refer a student.</h2>
+      <p class="lede" style="margin-bottom:2rem">If you're advising a student who'd thrive here, send them our way. We'll follow up with them directly and let you know we did.</p>
+
+      <form class="form-card" data-sheet-form="referral" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="rf-your-name">Your name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="rf-your-name" name="referrer_name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="rf-your-email">Your LBCC email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="rf-your-email" name="referrer_email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="rf-student">Student's name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="rf-student" name="student_name" required>
+          </div>
+          <div class="field">
+            <label for="rf-student-email">Student's LBCC email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="rf-student-email" name="student_email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="rf-why">Why this student?</label>
+          <span class="hint">Optional, but it helps us open the conversation well.</span>
+          <textarea id="rf-why" name="why"></textarea>
+        </div>
+        <div class="choice">
+          <input type="checkbox" id="rf-told" name="student_informed" value="Yes">
+          <label for="rf-told" style="font-weight:400">I've told this student I'm referring them.</label>
+        </div>
+        <div class="honey" aria-hidden="true">
+          <label for="rf-website">Leave this field empty</label>
+          <input type="text" id="rf-website" name="_website" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn btn--primary" type="submit">Send referral</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+
+      <div class="callout" style="margin-top:1.5rem">
+        <p><strong>Need materials?</strong> One-pagers, FAQ sheets, and slides for classroom visits are available on request. Email <a href="mailto:vcalip@lbcc.edu">vcalip@lbcc.edu</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap">
+      <p class="eyebrow">Accessibility</p>
+      <h2>Tell us what you need.</h2>
+      <p class="lede">If any part of this program or these forms isn't accessible to you, email <a href="mailto:vcalip@lbcc.edu">vcalip@lbcc.edu</a> and we'll get you what you need another way. That includes information sessions, course materials, the kickoff, and the capstone event.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-lockup lockup">
+      <!-- Replace with approved logo files once Marketing signs off -->
+      <p class="lockup__text">Long Beach City College<span>Business &amp; Computer Information Systems</span></p>
+      <p class="lockup__text">Strong Workforce Program<span>California Community Colleges</span></p>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <h2>For students</h2>
+        <ul>
+          <li><a href="program.html">The program</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="capstone.html">Capstone pitch</a></li>
+          <li><a href="apply.html">Join the interest list</a></li>
+          <li><a href="https://www.lbcc.edu/class-schedule">LBCC class schedule</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>For partners</h2>
+        <ul>
+          <li><a href="partners.html">Judge the capstone</a></li>
+          <li><a href="partners.html#speak">Speak to the cohort</a></li>
+          <li><a href="partners.html#mentor">Mentor a team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>For faculty &amp; staff</h2>
+        <ul>
+          <li><a href="about.html">Project team</a></li>
+          <li><a href="about.html#model">The learning community model</a></li>
+          <li><a href="apply.html#refer">Refer a student</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:yvillacreses109@lbcc.edu">yvillacreses109@lbcc.edu</a></li>
+          <li><a href="mailto:vcalip@lbcc.edu">vcalip@lbcc.edu</a></li>
+          <li><a href="https://www.lbcc.edu">lbcc.edu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>AI Innovators is a Career Technical Education initiative of Long Beach City College, supported by the California Community Colleges Strong Workforce Program through LBCC Workforce Education.</p>
+      <p>Long Beach City College is an equal opportunity institution. Need an accommodation to participate? Email <a href="mailto:vcalip@lbcc.edu">vcalip@lbcc.edu</a> and we'll arrange it.</p>
+      <p>&copy; 2026 Long Beach City College. <a href="about.html#privacy">How we use information you submit</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
